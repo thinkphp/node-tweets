@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title>Grabbing Tweets using Node.js</title>  
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>  
+    <body>  
+        <h1>Grabbing Tweets using Node.js</h1>
+        <ul id="tweets"></ul>  
+        <script type="text/javascript">  
+
+        var tweet_list = $("#tweets");  
+          
+        function load_tweets() {  
+
+            $.getJSON("/stream", function( tweets ) {  
+
+                tweets = JSON.parse(tweets) 
+console.log(tweets)
+                $.each(tweets, function() {  
+
+                    $("<li>").html(this.text).prependTo(tweet_list);  
+                });  
+            });  
+
+
+        }  
+          
+        setTimeout(load_tweets, 1000)
+
+        </script>  
+    </body>  
+</html> 
