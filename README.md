@@ -7,6 +7,8 @@ Grabbing tweets using Node.js
 ```
 $ git clone git://github.com/thinkphp/node-tweets.git
 
+$ cd node-tweets
+
 $ node server.js
 
 ```
