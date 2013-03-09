@@ -15,7 +15,7 @@ $ node server.js
 
 ```js
 
-Run the server using node, then go to http//localhost:8080/tweets.html and you will see the public tweets stream into your browser.
+Run the server using node, then go to http://localhost:8080/tweets.html and you will see the public tweets stream into your browser.
 
 ```
 
